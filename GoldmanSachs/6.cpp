@@ -4,12 +4,12 @@
 class Solution {
 public:
     string gcdOfStrings(string str1, string str2) {
-        if (str1.empty() || str2.empty()) {
+        if (str1.empty() or str2.empty()) {
             return "";
         }
         int c = gcd(str1.length(), str2.length());
         const auto& result = str1.substr(0, c);
-        return check(str1, result) && check(str2, result) ? result : "";
+        return check(str1, result) and check(str2, result) ? result : "";
     }
     
     private:
